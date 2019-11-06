@@ -2,18 +2,25 @@ package com.tjoeun.a20191106_01_listviewpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.tjoeun.a20191106_01_listviewpractice.adapters.NoticeAdapter
 import com.tjoeun.a20191106_01_listviewpractice.datas.NoticeData
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
     var noticeList = ArrayList<NoticeData>()
+    var noticeAdapter:NoticeAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         addNotices()
+
+        noticeAdapter = NoticeAdapter(this, noticeList)
+
+        noticeListView.adapter = noticeAdapter
     }
 
     fun addNotices(){
