@@ -7,11 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="공지사항 목록"/>
+-->
+    <Button
+        android:id="@+id/addNoticeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공지사항 추가"/>
 
     <ListView
         android:id="@+id/noticeListView"
